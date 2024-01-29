@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jira Dasjboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <div class="nav">
+        <h3>Task Management System</h3>
+        <Button id="login">Login</Button>
+    </div>
+    
+    <main>
+        <section class="container" id="todo">
+            <h2>TODO</h2>
+        </section>
+        <section class="container" id="in-progress">
+            <h2>In Progress</h2>
+        </section>
+        <section class="container" id="done">
+            <h2>Done</h2>
+        </section>
+
+    </main>
+
+    <section class="modal hide-modal" id="modal">
+        <h2>Create Task</h2>
+        <span class="material-symbols-outlined toggle" onclick="toggleModal(this)">expand_less</span>
+        <form id="Create-task-form">
+            <input value="Chat App" type="text" required name="title" placeholder="Task Title" />
+            <textarea name="description" placeholder="Task Description" required cols="30" rows="3"
+                value="Chat App description">
+  Chat App description</textarea>
+            <input type="text" name="developer" required placeholder="Developer Name" value="Mohammad Shahzeb" />
+            <input type="number" name="estimate" id="estimate" placeholder="Estimated time in days" value="3" />
+            <select name="status" required>
+                <option value="todo">To Do</option>
+                <option value="in-progress">In Progress</option>
+                <option value="done">Done</option>
+            </select>
+
+
+
+            <button>Create New Task</button>
+        </form>
+    </section>
+
+    <script src="drag drop.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
